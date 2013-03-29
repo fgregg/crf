@@ -9,8 +9,5 @@ fi
 echo "Using CRF_HOME=${CRF_HOME}"
 
 # Setting the classpath variable
+export CLASSPATH=$CRF_HOME/lib/colt.jar:$CRF_HOME/lib/CRF.jar:$CRF_HOME/lib/CRF-Trove_3.0.2.jar:$CRF_HOME/lib/LBFGS.jar:build:.
 
-for file in `ls $CRF_HOME/lib/*.jar`
-do
-  export CLASSPATH=$file:$CLASSPATH
-done
