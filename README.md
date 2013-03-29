@@ -1,28 +1,31 @@
+# Requirements
+
 You will need jdk1.4 or above and ant to compile.
-
-
-
-Make sure to set the classpath by running "settings.sh" after
-setting CRF_HOME to the directory where you have unpackaged this distribution.
 
 # Install
 
-```
+```bash
+export CRF_HOME=/path/to/repo
 ant
-source settings.sh
+source settings.sh # Sets classpaths
 ```
 
+# Address parsing 
 
 A sample dataset for the segmentation problem is available under samples
 Run it as 
  
-"java iitb.Segment.Segment train -f samples/us50.conf"
-"java iitb.Segment.Segment test -f samples/us50.conf"
-"java iitb.Segment.Segment calc -f samples/us50.conf" (report performance statistics)
+```bash 
+java iitb.Segment.Segment train -f samples/us50.conf
+java iitb.Segment.Segment test -f samples/us50.conf
+java iitb.Segment.Segment calc -f samples/us50.conf # report performance statistics
+```
 
 or all together with
 
-"java iitb.Segment.Segment all -f samples/us50.conf"
+```bash
+java iitb.Segment.Segment all -f samples/us50.conf
+```
 
 Files
 -----
